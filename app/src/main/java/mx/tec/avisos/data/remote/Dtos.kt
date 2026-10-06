@@ -42,5 +42,10 @@ data class AvisoDto(
     val imagen: String? = null
 )
 
+/** `imagen`: la clave que devolvió `POST /imagenes`. Con null no se manda (explicitNulls = false). */
 @Serializable
-data class NuevoAvisoBody(val titulo: String, val cuerpo: String)
+data class NuevoAvisoBody(val titulo: String, val cuerpo: String, val imagen: String? = null)
+
+/** Lo que devuelve el servidor al recibir una imagen. */
+@Serializable
+data class ImagenDto(val id: String, val tipo: String, val bytes: Int)
