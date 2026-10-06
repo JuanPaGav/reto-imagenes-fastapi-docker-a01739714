@@ -25,6 +25,8 @@ La app no habla con `startdroid.com`: habla con **tu** servidor, el del anexo de
 Para un teléfono de verdad, usa el túnel del servidor y pon su dirección en
 `local.properties`: `avisos.api=https://…trycloudflare.com/api/`
 
+
+
 ## Cómo trabajar
 
 Haz un commit en cada checkpoint de la guía:

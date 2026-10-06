@@ -25,7 +25,7 @@ android {
     defaultConfig {
         applicationId = "mx.tec.avisos"
         minSdk = 24
-        targetSdk = 37
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -76,4 +76,7 @@ dependencies {
     ksp(libs.androidx.hilt.compiler)
 
     debugImplementation(libs.androidx.ui.tooling)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 }
