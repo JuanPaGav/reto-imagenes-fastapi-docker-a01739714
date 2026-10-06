@@ -52,6 +52,7 @@ fun PublicarScreen(
     onTituloChange: (String) -> Unit,
     onCuerpoChange: (String) -> Unit,
     onGaleria: () -> Unit,
+    onCamara: () -> Unit,
     onQuitarImagen: () -> Unit,
     onPublicar: () -> Unit,
     onCancelar: () -> Unit,
@@ -111,6 +112,11 @@ fun PublicarScreen(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(espaciado.sm)
             ) {
+                OutlinedButton(onClick = onCamara, enabled = !uiState.enviando) {
+                    Icon(painterResource(R.drawable.ic_camara), contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(espaciado.sm))
+                    Text("Cámara")
+                }
                 OutlinedButton(onClick = onGaleria, enabled = !uiState.enviando) {
                     Icon(painterResource(R.drawable.ic_galeria), contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(espaciado.sm))
@@ -156,7 +162,7 @@ private fun PublicarPreview() {
                 cuerpo = "El parcial es el jueves a las 10:00 en el salón de siempre. Traigan lápiz."
             ),
             autor = "profe.prueba",
-            onTituloChange = {}, onCuerpoChange = {}, onPublicar = {}, onCancelar = {}, onGaleria = {}, onQuitarImagen = {}
+            onTituloChange = {}, onCuerpoChange = {}, onPublicar = {}, onCancelar = {}, onGaleria = {}, onQuitarImagen = {}, onCamara = {}
         )
     }
 }
